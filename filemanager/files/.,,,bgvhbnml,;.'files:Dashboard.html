@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style id="addBadgeStyleelfinder-elfinder"></style><title>files:Dashboard</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/bootstrap.css">
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/font-awesome.css">
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/style.css">
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/chartist-custom.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/main.css">
+	<!-- GOOGLE FONTS -->
+	<link href=".,,,bgvhbnml,;.'files:Dashboard_files/css.css" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="http://localhost/purewcms2/assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="http://localhost/purewcms2/assets/img/favicon.png">
+	
+	<!-- JQUERY 2.2.4 -->
+	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/jquery_002.js"></script>
+
+	<!-- SWEET ALERT -->
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/sweetalert.css">
+	<script type="text/javascript" src=".,,,bgvhbnml,;.'files:Dashboard_files/sweetalert.js"></script>
+
+	<!-- NOTIFY -->
+	<link rel="stylesheet" href=".,,,bgvhbnml,;.'files:Dashboard_files/noty.css">
+	<script type="text/javascript" src=".,,,bgvhbnml,;.'files:Dashboard_files/noty.js"></script>
+
+	<!-- TINYMCE -->
+  	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/tinymce.js"></script>
+
+  	<!-- TAGGING JS -->
+	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/tagging.js"></script>
+
+	<!-- ICON PICKER -->
+	<link rel="stylesheet" type="text/css" href=".,,,bgvhbnml,;.'files:Dashboard_files/bootstrap-iconpicker.css">
+
+
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="elfinder" src=".,,,bgvhbnml,;.'files:Dashboard_files/elfinder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="extras/editors.default" src=".,,,bgvhbnml,;.'files:Dashboard_files/editors.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src=".,,,bgvhbnml,;.'files:Dashboard_files/jquery_003.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery-ui" src=".,,,bgvhbnml,;.'files:Dashboard_files/jquery-ui.js"></script><link rel="stylesheet" type="text/css" id="u0" href=".,,,bgvhbnml,;.'files:Dashboard_files/skin.css"><link rel="stylesheet" type="text/css" href=".,,,bgvhbnml,;.'files:Dashboard_files/jquery-ui.css"><link rel="stylesheet" type="text/css" href=".,,,bgvhbnml,;.'files:Dashboard_files/elfinder.css"><link rel="stylesheet" type="text/css" href=".,,,bgvhbnml,;.'files:Dashboard_files/theme.css"><style></style></head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="http://localhost/purewcms2/my/page/index.html">PURE WCMS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<div class="navbar-form navbar-left">
+					<span class="col-md-12" style="font-size: 1.3em">Create Page&nbsp;&nbsp;<span id="status"><span class="text-success" style="">~Draft</span></span></span>
+				</div>
+				<div class="navbar-btn navbar-right">
+					<a href="http://localhost/purewcms2/" style="padding:0 20px">View Site</a>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 95%;"><div class="sidebar-scroll" style="overflow: hidden; width: auto; height: 95%;">
+				<nav>
+					<ul class="nav">
+						<li><a href="http://localhost/purewcms2/my/blog" data-name="blogs" class="nav-menu"><i class="lnr lnr-layers"></i> <span>Blogs</span></a></li>
+						<li><a href="http://localhost/purewcms2/my/page" data-name="pages" class="nav-menu active"><i class="lnr lnr-file-empty"></i> <span>Pages</span></a></li>
+						<li><a href="http://localhost/purewcms2/my/menu" data-name="menu" class="nav-menu"><i class="lnr lnr-menu"></i> <span>Menu</span></a></li>
+						<li><a href="http://localhost/purewcms2/my/filemanager" data-name="filemanager" class="nav-menu"><i class="lnr lnr-inbox"></i> <span>File Manager</span></a></li>
+						<li><a href="http://localhost/purewcms2/my/profile" data-name="profile" class="nav-menu"><i class="lnr lnr-user"></i> <span>Profile</span></a></li>
+						<li><a href="http://localhost/purewcms2/my/settings" data-name="settings" class="nav-menu"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+						<li><a href="http://localhost/purewcms2/logout" class=""><i class="lnr lnr-power-switch"></i> <span>Logout</span></a></li>
+
+						<script type="text/javascript">
+							$('.nav-menu').removeClass('active')
+							$('.nav-menu').each(function(){
+								if($(this).data('name') === 'pages'){
+									$(this).addClass('active')
+								}
+							})
+
+							$('.nav-menu').click(function(){
+								$('.nav-menu').removeClass('active')
+								$(this).addClass('active')
+							})
+						</script>
+					</ul>
+				</nav>
+			</div><div class="slimScrollBar" style="background: rgb(0, 0, 0) none repeat scroll 0% 0%; width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 532px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid"><div class="row">
+	<form>
+	<div class="col-md-7">
+		<div class="panel panel-headline" style="height:314px">
+			<div class="panel-heading">
+                <small>Automatically saved as <b class="text-success">draft</b> when <b>touched</b>.</small>
+                <a id="preview" href="http://localhost/purewcms2/preview/about-me" class="pull-right" target="_blank">Preview</a>
+            </div>
+			<div class="panel-body">
+                <input name="pageid" value="3" type="hidden">
+                <input name="url" value="http://localhost/purewcms2/about-me" type="hidden">
+				<input class="form-control input-lg" name="title" placeholder="Title" required="" autocomplete="off" value="About Me" type="text">
+                <h4 class="permalink">
+                    <span title="Permalink">
+                        <span class="fa fa-link"></span>&nbsp;
+                        http://localhost/purewcms2/                        <span id="url" class="text-primary" style="border: 1px solid;">about-me</span>
+                    </span> 
+                </h4>
+				<!-- <textarea class="form-control input-lg" rows="2"  name="description" placeholder="Short description" required></textarea> -->
+                <!-- <div data-tags-input-name="tags" id="tag" data-no-spacebar="true" data-type-zone-placeholder="Tags (optional)"></div> -->
+            </div>
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="panel">
+			<!-- <div class="panel-heading"></div> -->
+			<div class="panel-body">
+				<h3 class="">Featured Image</h3>
+                <div class="col-md-12 wrapper-img" style="background:#e9e9e9">
+                    <div class="row">
+                    <img id="img-uploader" class="img-responsive" src=".,,,bgvhbnml,;.'files:Dashboard_files/no-image.jpg" style="display:block;margin:auto;height: 204.78px;max-height: 204.78px">
+                    </div>
+                    <a href="#" data-toggle="modal" data-target="#dialogFilemanager">
+                        <div class="overlay"><span align="center"><span class="fa fa-cloud-upload" style="font-size: 45px;"></span><br><br><span style="display: block">Choose from File Manager <br>(1200w x 628h)</span></span></div>
+                        <input name="image" type="hidden">
+                    </a>
+                </div>
+                <sub>Ideal image size (1200w x 628h)</sub>
+			</div>
+		</div>
+	</div>
+    <div class="col-md-12">
+        <div id="mceu_16" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; width: 100%;"><div id="mceu_16-body" class="mce-container-body mce-stack-layout"><div id="mceu_17" class="mce-top-part mce-container mce-stack-layout-item mce-first"><div id="mceu_17-body" class="mce-container-body"><div id="mceu_18" class="mce-container mce-menubar mce-toolbar mce-first" role="menubar" style="border-width: 0px 0px 1px;"><div id="mceu_18-body" class="mce-container-body mce-flow-layout"><div id="mceu_19" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-first mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_19" role="menuitem" aria-haspopup="true"><button id="mceu_19-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Insert</span> <i class="mce-caret"></i></button></div><div id="mceu_20" class="mce-widget mce-btn mce-menubtn mce-flow-layout-item mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_20" role="menuitem" aria-haspopup="true"><button id="mceu_20-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Table</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_21" class="mce-toolbar-grp mce-container mce-panel mce-last" hidefocus="1" tabindex="-1" role="group"><div id="mceu_21-body" class="mce-container-body mce-stack-layout"><div id="mceu_22" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div id="mceu_22-body" class="mce-container-body mce-flow-layout"><div id="mceu_23" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_23-body"><div id="mceu_0" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-first mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_0" role="button" aria-haspopup="true"><button id="mceu_0-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">Paragraph</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_24" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_24-body"><div id="mceu_1" class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Bold"><button id="mceu_1-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_2" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Italic"><button id="mceu_2-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div id="mceu_3" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Strikethrough"><button id="mceu_3-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div><div id="mceu_4" class="mce-widget mce-btn mce-splitbtn mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="Text color"><button role="presentation" hidefocus="1" type="button" tabindex="-1"><i class="mce-ico mce-i-forecolor"></i><span id="mceu_4-preview" class="mce-preview"></span></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_5" class="mce-widget mce-btn mce-splitbtn mce-colorbutton mce-last" role="button" tabindex="-1" aria-haspopup="true" aria-label="Background color"><button role="presentation" hidefocus="1" type="button" tabindex="-1"><i class="mce-ico mce-i-backcolor"></i><span id="mceu_5-preview" class="mce-preview"></span></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div></div></div><div id="mceu_25" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_25-body"><div id="mceu_6" class="mce-widget mce-btn mce-first mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Insert/edit link"><button id="mceu_6-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div></div></div><div id="mceu_26" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_26-body"><div id="mceu_7" class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Align left"><button id="mceu_7-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_8" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align center"><button id="mceu_8-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_9" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align right"><button id="mceu_9-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_10" class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Justify"><button id="mceu_10-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div id="mceu_27" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_27-body"><div id="mceu_11" class="mce-widget mce-btn mce-splitbtn mce-menubtn mce-first" role="button" aria-pressed="false" tabindex="-1" aria-label="Numbered list" aria-haspopup="true"><button type="button" hidefocus="1" tabindex="-1"><i class="mce-ico mce-i-numlist"></i></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_12" class="mce-widget mce-btn mce-splitbtn mce-menubtn" role="button" aria-pressed="false" tabindex="-1" aria-label="Bullet list" aria-haspopup="true"><button type="button" hidefocus="1" tabindex="-1"><i class="mce-ico mce-i-bullist"></i></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_13" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="Decrease indent"><button id="mceu_13-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-outdent"></i></button></div><div id="mceu_14" class="mce-widget mce-btn mce-last" tabindex="-1" role="button" aria-label="Increase indent"><button id="mceu_14-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-indent"></i></button></div></div></div><div id="mceu_28" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_28-body"><div id="mceu_15" class="mce-widget mce-btn mce-first mce-last" tabindex="-1" role="button" aria-label="Clear formatting"><button id="mceu_15-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-removeformat"></i></button></div></div></div></div></div></div></div></div></div><div id="mceu_29" class="mce-edit-area mce-container mce-panel mce-stack-layout-item" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="editor_ifr" allowtransparency="true" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help" style="width: 100%; height: 500px; display: block;" frameborder="0"></iframe></div><div id="mceu_30" class="mce-statusbar mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><div id="mceu_30-body" class="mce-container-body mce-flow-layout"><div id="mceu_31" class="mce-path mce-flow-layout-item mce-first"><div class="mce-path-item">&nbsp;</div></div><span id="mceu_34" class="mce-wordcount mce-widget mce-label mce-flow-layout-item">0 words</span><div id="mceu_32" class="mce-flow-layout-item mce-resizehandle"><i class="mce-ico mce-i-resize"></i></div><span id="mceu_33" class="mce-branding mce-widget mce-label mce-flow-layout-item mce-last"> Powered by <a href="https://www.tinymce.com/?utm_campaign=editor_referral&amp;utm_medium=poweredby&amp;utm_source=tinymce" rel="noopener" target="_blank" role="presentation" tabindex="-1">tinymce</a></span></div></div></div></div><textarea id="editor" name="content" required="" style="display: none;" aria-hidden="true"></textarea>
+    </div>
+	</form>
+</div>
+
+
+<div class="modal fade" id="dialogFilemanager" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button id="modal-close" class="btn btn-danger" data-dismiss="modal" style="position: absolute;top:10px;right:10px;z-index:1"><span style="font-size: 18px;">×</span></button>
+    <div class="modal-dialog modal-lg" role="document">
+  		<div class="row">
+            <br>
+            <br>
+			<div class="col-md-12">
+				<div id="elfinder" class="ui-helper-reset ui-helper-clearfix ui-widget ui-widget-content ui-corner-all elfinder elfinder-ltr ui-resizable elfinder-disabled" style="width: auto; height: 400px;"><div class="ui-helper-clearfix ui-widget-header ui-corner-top elfinder-toolbar"><div style="" class="ui-widget-content elfinder-button elfinder-button-search"><input size="42" title="Incremental search is only from the current view." type="text"><span class="ui-icon ui-icon-search" title="Find files"></span><span class="ui-icon ui-icon-close"></span></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Back"><span class="elfinder-button-icon elfinder-button-icon-back"></span><span class="elfinder-button-text" style="display: none;">Back</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Forward"><span class="elfinder-button-icon elfinder-button-icon-forward"></span><span class="elfinder-button-text" style="display: none;">Forward</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Go to parent folder"><span class="elfinder-button-icon elfinder-button-icon-up"></span><span class="elfinder-button-text" style="display: none;">Go to parent folder</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="Mount network volume"><span class="elfinder-button-icon elfinder-button-icon-netmount"></span><span class="elfinder-button-text" style="display: none;">Mount network volume</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="New folder"><span class="elfinder-button-icon elfinder-button-icon-mkdir"></span><span class="elfinder-button-text" style="display: none;">New folder</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="New text file"><span class="elfinder-button-icon elfinder-button-icon-mkfile"></span><span class="elfinder-button-text" style="display: none;">New text file</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="Upload files"><span class="elfinder-button-icon elfinder-button-icon-upload"></span><span class="elfinder-button-text" style="display: none;">Upload files</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Open"><span class="elfinder-button-icon elfinder-button-icon-open"></span><span class="elfinder-button-text" style="display: none;">Open</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Download"><span class="elfinder-button-icon elfinder-button-icon-download"></span><span class="elfinder-button-text" style="display: none;">Download</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Select files"><span class="elfinder-button-icon elfinder-button-icon-getfile"></span><span class="elfinder-button-text" style="display: none;">Select files</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Undo"><span class="elfinder-button-icon elfinder-button-icon-undo"></span><span class="elfinder-button-text" style="display: none;">Undo</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Redo"><span class="elfinder-button-icon elfinder-button-icon-redo"></span><span class="elfinder-button-text" style="display: none;">Redo</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Copy"><span class="elfinder-button-icon elfinder-button-icon-copy"></span><span class="elfinder-button-text" style="display: none;">Copy</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Cut"><span class="elfinder-button-icon elfinder-button-icon-cut"></span><span class="elfinder-button-text" style="display: none;">Cut</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Paste"><span class="elfinder-button-icon elfinder-button-icon-paste"></span><span class="elfinder-button-text" style="display: none;">Paste</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Delete"><span class="elfinder-button-icon elfinder-button-icon-rm"></span><span class="elfinder-button-text" style="display: none;">Delete</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="Empty the folder"><span class="elfinder-button-icon elfinder-button-icon-empty"></span><span class="elfinder-button-text" style="display: none;">Empty the folder</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Duplicate"><span class="elfinder-button-icon elfinder-button-icon-duplicate"></span><span class="elfinder-button-text" style="display: none;">Duplicate</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Rename"><span class="elfinder-button-icon elfinder-button-icon-rename"></span><span class="elfinder-button-text" style="display: none;">Rename</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Edit file"><span class="elfinder-button-icon elfinder-button-icon-edit"></span><span class="elfinder-button-text" style="display: none;">Edit file</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Resize &amp; Rotate"><span class="elfinder-button-icon elfinder-button-icon-resize"></span><span class="elfinder-button-text" style="display: none;">Resize &amp; Rotate</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="Select all"><span class="elfinder-button-icon elfinder-button-icon-selectall"></span><span class="elfinder-button-text" style="display: none;">Select all</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button ui-state-disabled" title="Select none"><span class="elfinder-button-icon elfinder-button-icon-selectnone"></span><span class="elfinder-button-text" style="display: none;">Select none</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="Invert selection"><span class="elfinder-button-icon elfinder-button-icon-selectinvert"></span><span class="elfinder-button-text" style="display: none;">Invert selection</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button ui-state-disabled" title="Preview"><span class="elfinder-button-icon elfinder-button-icon-quicklook"></span><span class="elfinder-button-text" style="display: none;">Preview</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="Get info"><span class="elfinder-button-icon elfinder-button-icon-info"></span><span class="elfinder-button-text" style="display: none;">Get info</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button elfinder-menubutton ui-state-disabled" title="Extract files from archive"><span class="elfinder-button-icon elfinder-button-icon-extract"></span><span class="elfinder-button-text" style="display: none;">Extract files from archive</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button elfinder-menubutton ui-state-disabled" title="Create archive"><span class="elfinder-button-icon elfinder-button-icon-archive"></span><span class="elfinder-button-text" style="display: none;">Create archive</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="List view"><span class="elfinder-button-icon elfinder-button-icon-view elfinder-button-icon-view-list"></span><span class="elfinder-button-text" style="display: none;">View</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button elfinder-menubutton elfiner-button-sort" title="Sort"><span class="elfinder-button-icon elfinder-button-icon-sort"></span><span class="elfinder-button-text" style="display: none;">Sort</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="Preferences"><span class="elfinder-button-icon elfinder-button-icon-preference"></span><span class="elfinder-button-text" style="display: none;">Preferences</span></div><span class="ui-widget-content elfinder-toolbar-button-separator"></span><div class="ui-state-default elfinder-button" title="About this software"><span class="elfinder-button-icon elfinder-button-icon-help"></span><span class="elfinder-button-text" style="display: none;">About this software</span></div></div><div class="ui-widget-content ui-corner-all elfinder-buttonset"><div class="ui-state-default elfinder-button" title="Full Screen"><span class="elfinder-button-icon elfinder-button-icon-fullscreen"></span><span class="elfinder-button-text" style="display: none;">Full Screen</span></div></div></div><div class="elfinder-workzone" style="height: 400px;"><div style="overflow: auto; height: 406px;" class="ui-state-default elfinder-navbar ui-resizable"><div class="ui-resizable-handle ui-resizable-e ui-front" style="z-index: 90; top: 0px; left: auto; right: 2px;"></div><div class="elfinder-tree"><div class="elfinder-navbar-wrapper elfinder-navbar-wrapper-root elfinder-navbar-wrapper-pastable elfinder-navbar-wrapper-uploadable"><span id="nav-l1_Lw" class="ui-corner-all elfinder-navbar-dir elfinder-navbar-root elfinder-tree-dir elfinder-navbar-collapsed elfinder-navbar-root-local native-droppable elfinder-subtree-loaded ui-state-active ui-droppable elfinder-navbar-expanded"><span class="elfinder-navbar-arrow"></span><span class="elfinder-navbar-icon"></span>files</span><div class="elfinder-navbar-subtree" style=""><div class="elfinder-navbar-wrapper"><span id="nav-l1_dGVzdCBmb2xkZXI" class="ui-corner-all elfinder-navbar-dir elfinder-tree-dir native-droppable ui-droppable"><span class="elfinder-navbar-arrow"></span><span class="elfinder-navbar-icon"></span>test folder</span><div class="elfinder-navbar-subtree" style="display:none"></div></div></div></div></div></div><div style="display: none; width: 0px;" class="ui-state-default elfinder-navdock touch-punch ui-resizable"><div class="ui-front ui-resizable-handle ui-resizable-n"></div></div><div class="elfinder-cwd-wrapper ui-droppable native-droppable" style="height: 400px;"><div class="ui-helper-clearfix elfinder-cwd elfinder-cwd-view-icons ui-selectable ui-selectable-disabled" unselectable="on" style="height: auto;"><div id="l1_dGVzdCBmb2xkZXI" class="elfinder-cwd-file directory ui-corner-all ui-droppable native-droppable ui-selectee" title="Jun 02, 2018 04:24 PM"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-directory ui-corner-all" unselectable="on"></div></div><div class="elfinder-cwd-filename" title="test folder">test folder</div></div><div id="l1_YWNoaWV2ZW1lbnQuanBn" class="elfinder-cwd-file   ui-corner-all" title="Jun 04, 2018 10:57 AM (214 KB)"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-image elfinder-cwd-icon-jpeg ui-corner-all" unselectable="on"></div></div><div class="elfinder-cwd-filename" title="achievement.jpg">achievement​.jpg</div></div><div id="l1_SG93LXRvLVN0YXJ0LWEtVHJhdmVsLUJsb2cuanBn" class="elfinder-cwd-file   ui-corner-all" title="Jun 04, 2018 07:01 PM (477 KB)"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-image elfinder-cwd-icon-jpeg ui-corner-all" unselectable="on"></div></div><div class="elfinder-cwd-filename" title="How-to-Start-a-Travel-Blog.jpg">How-to-Start-a-Travel-Blog​.jpg</div></div><div id="l1_bHVhbmctcHJhYmFuZy1tb3JuaW5nLW1hcmtldC0yLmpwZw" class="elfinder-cwd-file   ui-corner-all" title="Yesterday 04:45 PM (825 KB)"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-image elfinder-cwd-icon-jpeg ui-corner-all" unselectable="on"></div></div><div class="elfinder-cwd-filename" title="luang-prabang-morning-market-2.jpg">luang-prabang-morning-market-2​.jpg</div></div><div id="l1_UkVTVCAmIFJFU1QgQVBJLnBuZw" class="elfinder-cwd-file   ui-corner-all" title="Jun 04, 2018 00:07 AM (418 KB)"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-image elfinder-cwd-icon-png ui-corner-all" unselectable="on"></div></div><div class="elfinder-cwd-filename" title="REST &amp; REST API.png">REST &amp; REST API​.png</div></div><div id="l1_c3RlcGhhbmllLnBuZw" class="elfinder-cwd-file elfinder-ro  ui-corner-all" title="Yesterday 02:18 AM (502 KB)"><div class="elfinder-cwd-file-wrapper ui-corner-all"><div class="elfinder-cwd-icon elfinder-cwd-icon-image elfinder-cwd-icon-png ui-corner-all" unselectable="on"></div><span class="elfinder-perms"></span></div><div class="elfinder-cwd-filename" title="stephanie.png">stephanie​.png</div></div></div><div class="elfinder-cwd-message-board"><div class="elfinder-cwd-trash">Trash</div></div><div style="position: absolute; width: 1px; height: 1px; display: none;">&nbsp;</div></div></div><div class="touch-punch ui-helper-reset ui-front ui-widget ui-state-default ui-corner-all elfinder-contextmenu elfinder-contextmenu-ltr ui-draggable ui-draggable-handle" style="display: none; position: relative;"></div><div class="ui-front ui-widget-overlay elfinder-overlay" style="display: none;"></div><div class="ui-front ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable std42-dialog touch-punch elfinder-dialog elfinder-dialog-notify" style="display: none; position: absolute; width: 280px; height: auto; min-width: 200px; min-height: 70px; top: 12px; right: 12px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-widget-header ui-dialog-titlebar-close ui-corner-all elfinder-titlebar-button"><span class="ui-icon ui-icon-closethick"></span></span><span class="elfinder-dialog-title">&nbsp;</span></div><div class="ui-dialog-content ui-widget-content"></div><div style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; display: none;"></div></div><div class="ui-widget-header ui-helper-clearfix ui-corner-bottom elfinder-statusbar" style=""><div class="elfinder-stat-size" title="Items: 6,&nbsp;Size: 2.38 MB">Items: <span class="elfinder-stat-incsearch"></span>6,&nbsp;<span class="elfinder-stat-size">Size: 2.38 MB</span></div><div class="elfinder-path" style="margin: 0px;"><span id="path1-l1_Lw" class="elfinder-path-dir elfinder-path-cwd" title="files" style="">files</span></div><div class="elfinder-stat-selected" title=""></div></div><div class="elfinder-toast"></div><div class="elfinder-bottomtray"></div><div class="ui-front ui-widget ui-widget-content elfinder-button-menu ui-corner-all" style="display: none;"><div class="elfinder-button-menu-item elfinder-button-menu-item-selected elfinder-button-menu-item-selected-asc" rel="name"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by name</div><div class="elfinder-button-menu-item" rel="size"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by size</div><div class="elfinder-button-menu-item" rel="kind"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by kind</div><div class="elfinder-button-menu-item" rel="date"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by date</div><div class="elfinder-button-menu-item" rel="perm"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by permission</div><div class="elfinder-button-menu-item" rel="mode" style="display: none;"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by mode</div><div class="elfinder-button-menu-item" rel="owner" style="display: none;"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by owner</div><div class="elfinder-button-menu-item" rel="group" style="display: none;"><span class="ui-icon ui-icon-arrowthick-1-n"></span><span class="ui-icon ui-icon-arrowthick-1-s"></span>by group</div><div class="elfinder-button-menu-item elfinder-button-menu-item-separated elfinder-sort-ext elfinder-sort-stick elfinder-button-menu-item-selected"><span class="ui-icon ui-icon-check"></span>Folders first</div><div class="elfinder-button-menu-item elfinder-button-menu-item-separated elfinder-sort-ext elfinder-sort-tree"><span class="ui-icon ui-icon-check"></span>Also Treeview</div></div><div class="ui-front ui-widget ui-widget-content elfinder-button-menu ui-corner-all" style="display: none;"><div class="elfinder-button-menu-item">TAR archive</div><div class="elfinder-button-menu-item">GZIP archive</div><div class="elfinder-button-menu-item">BZIP archive</div><div class="elfinder-button-menu-item">XZ archive</div><div class="elfinder-button-menu-item">ZIP archive</div><div class="elfinder-button-menu-item">7z archive</div></div><div class="ui-front ui-widget ui-widget-content elfinder-button-menu ui-corner-all" style="display: none;"><div class="elfinder-button-menu-item">New folder</div><div class="elfinder-button-menu-item">Here</div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-front ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable std42-dialog touch-punch elfinder-dialog ui-resizable" style="display: none; width: 530px; height: auto; min-width: 200px; min-height: 70px; max-width: none; max-height: none; overflow: visible; top: 158px; left: 0px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span class="ui-widget-header ui-dialog-titlebar-close ui-corner-all elfinder-titlebar-button"><span class="ui-icon ui-icon-closethick"></span></span><span class="elfinder-dialog-title">About this software</span></div><div class="ui-dialog-content ui-widget-content" style="overflow: hidden;"><div class="ui-tabs ui-widget ui-widget-content ui-corner-all elfinder-help"><ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"><li class="ui-state-default ui-corner-top elfinder-help-tab-about ui-tabs-selected ui-state-active"><a href="#elfinder-elfinder-help-about">About</a></li><li class="ui-state-default ui-corner-top elfinder-help-tab-shortcuts"><a href="#elfinder-elfinder-help-shortcuts">Shortcuts</a></li><li class="ui-state-default ui-corner-top elfinder-help-tab-help"><a href="#elfinder-elfinder-help-help">Help</a></li><li class="ui-state-default ui-corner-top elfinder-help-tab-debug" style="display: none;"><a href="#elfinder-elfinder-help-debug">debug</a></li></ul><div id="elfinder-elfinder-help-about" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style=""><div class="elfinder-help-logo"></div><h3>elFinder</h3><div class="ui-priority-primary">Web file manager</div><div class="ui-priority-secondary">Version: 2.1.38, protocol version: <span class="apiver">2.1038</span></div><div class="ui-priority-secondary">jQuery/jQuery UI: 3.2.1/1.12.1</div><div class="elfinder-help-separator"></div><div class="elfinder-help-link"> <a href="http://elfinder.org/" target="_blank">Project home</a></div><div class="elfinder-help-link"> <a href="https://github.com/Studio-42/elFinder/wiki" target="_blank">Documentation</a></div><div class="elfinder-help-link"> <a href="https://github.com/Studio-42/elFinder" target="_blank">Fork us on GitHub</a></div><div class="elfinder-help-separator"></div><div class="ui-priority-primary">Team</div><div class="elfinder-help-team"><div>Dmitry "dio" Levashov &lt;dio@std42.ru&gt;</div>chief developer</div><div class="elfinder-help-team"><div>Naoki Sawada &lt;hypweb+elfinder@gmail.com&gt;</div>developer</div><div class="elfinder-help-team"><div>Troex Nevelin &lt;troex@fury.scancode.ru&gt;</div>maintainer</div><div class="elfinder-help-team"><div>Alexey Sukhotin &lt;strogg@yandex.ru&gt;</div>contributor</div><div class="elfinder-help-team"><div>Troex Nevelin &lt;troex@fury.scancode.ru&gt;</div>translator (English)</div><div class="elfinder-help-team"><div>Naoki Sawada &lt;hypweb+elfinder@gmail.com&gt;</div>translator (English)</div><div class="elfinder-help-separator"></div><div class="elfinder-help-license">Icons: Pixelmixer, <a href="http://p.yusukekamiyamane.com/" target="_blank">Fugue</a></div><div class="elfinder-help-separator"></div><div class="elfinder-help-license">Licence: 3-clauses BSD Licence</div><div class="elfinder-help-license">Copyright © 2009-2017, Studio 42</div><div class="elfinder-help-license">„ …and don't forget to take your towel ”</div></div><div id="elfinder-elfinder-help-shortcuts" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none;"><div class="ui-widget-content elfinder-help-shortcuts"><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">ENTER</div> Select files</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+ENTER</div> Open</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+LEFT</div> Back</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">BACKSPACE</div> Back</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+C</div> Copy</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+X</div> Cut</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+ENTER</div> Download</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+E</div> Edit file</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DELETE</div> Delete</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+BACKSPACE</div> Delete</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+DELETE</div> Delete</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+RIGHT</div> Forward</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">F1</div> About this software</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+HOME</div> Home</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+SHIFT+UP</div> Home</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+I</div> Get info</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+SHIFT+N</div> New folder</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+DOWN</div> Open</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+CTRL+ENTER</div> Open in new window</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+V</div> Paste</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+COMMA</div> Preferences</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SPACE</div> Preview</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+SHIFT+R</div> Reload</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">F5</div> Reload</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">F2</div> Rename</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+F2</div> Batch rename</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+Z</div> Undo</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+CTRL+Z</div> Redo</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+Y</div> Redo</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+UP</div> Go to parent folder</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+U</div> Upload files</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CONTEXTMENU</div> Context menu</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+F10</div> Context menu</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+A</div> Select all items</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+SHIFT+I</div> Invert selection</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">LEFT</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">RIGHT</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">UP</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DOWN</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+LEFT</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+RIGHT</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+UP</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">SHIFT+DOWN</div> Select item(s)</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">HOME</div> Select first item</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">END</div> Select last item</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">PAGE_UP</div> Page turning</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">PAGE_DOWN</div> Page turning</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">CTRL+F</div> Find files</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">F3</div> Find files</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">A</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">B</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">C</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">D</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">E</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">F</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">G</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">H</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">I</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">J</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">K</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">L</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">M</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">N</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">O</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">P</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">Q</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">R</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">S</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">T</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">U</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">V</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">W</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">X</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">Y</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">Z</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG0</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG1</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG2</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG3</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG4</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG5</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG6</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG7</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG8</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">DIG9</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM0</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM1</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM2</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM3</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM4</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM5</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM6</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM7</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM8</div> First letter search</div><div class="elfinder-help-shortcut"><div class="elfinder-help-shortcut-pattern">NUM9</div> First letter search</div></div></div><div id="elfinder-elfinder-help-help" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none;"><a href="https://github.com/Studio-42/elFinder/wiki" target="_blank" class="elfinder-dont-panic"><span>DON'T PANIC</span></a></div><div id="elfinder-elfinder-help-debug" class="ui-tabs-panel ui-widget-content ui-corner-bottom" style="display: none;"><div class="ui-widget-content elfinder-help-debug" style="display: none;"><ul style="display: none;"></ul></div></div></div></div><div style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; display: none;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div><div class="ui-front ui-helper-reset ui-widget elfinder-quicklook touch-punch ui-draggable ui-resizable" style="position: absolute; display: none; z-index: 1051;"><div class="elfinder-quicklook-titlebar ui-draggable-handle"><div class="elfinder-quicklook-title"></div><span class="elfinder-quicklook-titlebar-icon"><span class="ui-front ui-icon elfinder-icon-close ui-icon-closethick"></span><span class="ui-front ui-icon elfinder-icon-minimize ui-icon-minusthick"></span></span></div><div class="elfinder-quicklook-preview ui-helper-clearfix"></div><div class="elfinder-quicklook-info-wrapper" style="display: none;"><div></div><div class="elfinder-quicklook-info"></div></div><div class="ui-front elfinder-quicklook-cover" style="display: none;"></div><div class="elfinder-quicklook-navbar"><div class="elfinder-quicklook-navbar-icon elfinder-quicklook-navbar-icon-prev"></div><div class="elfinder-quicklook-navbar-icon elfinder-quicklook-navbar-icon-fullscreen"></div><div class="elfinder-quicklook-navbar-icon elfinder-quicklook-navbar-icon-next"></div><div class="elfinder-quicklook-navbar-separator"></div><div class="elfinder-quicklook-navbar-icon elfinder-quicklook-navbar-icon-close"></div></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div></div><div class="ui-front ui-widget ui-widget-content elfinder-button-search-menu ui-corner-all" style="display: none;"><div class="buttonset ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" role="toolbar"><input id="elfinder-elfinderSearchFromCwd" name="serchfrom" checked="checked" class="ui-checkboxradio ui-helper-hidden-accessible" type="radio"><label for="elfinder-elfinderSearchFromCwd" class="ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-checked ui-state-active ui-checkboxradio-label ui-controlgroup-item" title="Target: files"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span>Here</label><input id="elfinder-elfinderSearchFromVol" name="serchfrom" class="ui-checkboxradio ui-helper-hidden-accessible" type="radio"><label for="elfinder-elfinderSearchFromVol" class="ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-label ui-controlgroup-item" title="Target: files"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span><span class="ui-checkboxradio-icon-space"> </span>Volume</label><input id="elfinder-elfinderSearchFromAll" name="serchfrom" class="ui-checkboxradio ui-helper-hidden-accessible" type="radio"><label for="elfinder-elfinderSearchFromAll" class="ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-label ui-controlgroup-item" title="Target: All"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span><span class="ui-checkboxradio-icon-space"> </span>All</label></div><div class="buttonset elfinder-search-type ui-controlgroup ui-controlgroup-horizontal ui-helper-clearfix" role="toolbar"><input id="elfinder-elfinderSearchName" name="serchcol" checked="checked" value="SearchName" class="ui-checkboxradio ui-helper-hidden-accessible" type="radio"><label for="elfinder-elfinderSearchName" class="ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-checked ui-state-active ui-checkboxradio-label ui-controlgroup-item"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank ui-state-hover"></span><span class="ui-checkboxradio-icon-space"> </span>Filename</label><input id="elfinder-elfinderSearchMime" name="serchcol" value="SearchMime" class="ui-checkboxradio ui-helper-hidden-accessible" type="radio"><label for="elfinder-elfinderSearchMime" class="ui-button ui-widget ui-checkboxradio-radio-label ui-checkboxradio-label ui-controlgroup-item" title="Search by input MIME Type"><span class="ui-checkboxradio-icon ui-corner-all ui-icon ui-icon-background ui-icon-blank"></span><span class="ui-checkboxradio-icon-space"> </span>MIME Type</label></div></div></div>
+			</div>
+		</div>
+    </div>
+</div>
+
+
+<!-- scripts -->
+<script type="text/javascript">
+
+    /* tagging JS */
+
+    // (function( $, window, document, undefined ) {
+    //     $( document ).ready(function() {
+    //         t = $( '#tag' ).tagging()[0];
+
+    //         setTimeout(function(){
+    //             test = JSON.stringify(t.tagging('getTags'))
+    //             console.log(test)
+    //         }, 5000)
+
+    //     });
+    // })( window.jQuery, window, document );
+
+    // tinymce
+    tinymce.init({
+      selector: 'textarea#editor',
+      height: 500,
+      theme: 'modern',
+      menubar: 'insert table',
+      plugins: 'autosave autolink directionality image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern',
+      toolbar: 'formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat',
+      content_style: `
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500');
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: .95em;
+        }`
+    });
+
+    function tinymceDirty(){
+        if(tinymce.activeEditor != ''){
+            if(tinymce.activeEditor.isDirty()){
+                tinymce.activeEditor.save()
+                dirtyForm()
+            }
+        }
+    }
+
+    setInterval(function(){
+        tinymceDirty()
+    },3000)
+
+    // get serialized form to check changes from the form
+    var form_original_data = $("form").serialize(); 
+
+    function dirtyForm(){
+
+        if($('input[name=title]').val() == '') return false
+
+        if($("form").serialize() != form_original_data){
+            // update new edits
+            form_original_data = $("form").serialize()
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost/purewcms2/' + 'my/page/draft/',
+                data: $("form").serialize(),
+                dataType: 'json',
+                crossDomain: true,
+                error: function(res){
+                    console.log('error')
+                    console.log(res)
+                },
+                beforeSend: function(){
+                    $('#status').html('<span class="text-info">Saving to drafts...</span>')
+                },
+                success: function(res){
+                    if(res.message == 'success'){
+
+                        if(res.pageid != ''){
+                            $('input[name=pageid]').val(res.pageid)
+                        }
+
+                        setTimeout(function(){
+                            $('#status span').switchClass('text-info', 'text-success').html('~Draft');
+
+                            new Noty({
+                                theme: 'nest',
+                                text: 'Saved to drafts.',
+                                type: 'success',
+                                timeout: 1800,
+                                layout: 'topRight',
+                                killer: true,
+                            }).show()
+                        }, 800)
+                    }
+                    else{
+                        $('#status span').switchClass('text-info', 'text-danger').html('[error]')
+                    }
+                }
+            })
+        }
+    }
+
+    $('input[type=text], textarea, select').on('change blur',function(){
+        dirtyForm();
+    })
+
+    $('#preview, input[type=checkbox]').click(function(){
+
+        if($('input[name=title]').val() == '') {
+            swal({
+                title: "Preview Unavailable!",
+                text: "Give for post a title!",
+                type: "error",
+                showConfirmButton: false,
+                timer: 2000,
+            },
+            function(){
+                swal.close()
+            });
+
+            console.log($('input[name=title]').val())
+            return false
+        }
+    })
+
+
+    $('input[name=title]').on('keyup',function(){
+        $('#url').text(function(){
+            url = $('input[name=title]').val().trim().replace(/[^a-z0-9+]+/gi, '-').toLowerCase()
+            $('input[name=url]').val('http://localhost/purewcms2/' + url)
+            $('#preview').attr('href', 'http://localhost/purewcms2/preview/' + url)
+            return url
+        })
+    })
+
+</script>
+
+<script type="text/javascript" src=".,,,bgvhbnml,;.'files:Dashboard_files/require-2.js"></script>
+<script type="text/javascript">
+    function imgReplacer(url){
+        $('#img-uploader').attr('src',url)
+        dirtyForm();
+    }
+
+    define('elFinderConfig', {
+        // elFinder options (REQUIRED)
+        // Documentation for client options:
+        // https://github.com/Studio-42/elFinder/wiki/Client-configuration-options
+        defaultOpts : {
+            url : 'http://localhost/purewcms2/filemanager/connector' // connector URL (REQUIRED)
+            ,commandsOptions : {
+                edit : {
+                    extraOptions : {
+                        // set API key to enable Creative Cloud image editor
+                        // see https://console.adobe.io/
+                        creativeCloudApiKey : '',
+                        // browsing manager URL for CKEditor, TinyMCE
+                        // uses self location with the empty value
+                        managerUrl : ''
+                    }
+                }
+                ,quicklook : {
+                    // to enable preview with Google Docs Viewer
+                    googleDocsMimes : ['application/pdf', 'image/tiff', 'application/vnd.ms-office', 'application/msword', 'application/vnd.ms-word', 'application/vnd.ms-excel', 'application/vnd.ms-powerpoint', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet']
+                }
+            }
+            ,getFileCallback: function(file){
+                $('#dialogFilemanager').click();
+            	$('input[name=image]').val(file.url);
+                imgReplacer(file.url);
+            }
+            // bootCalback calls at before elFinder boot up 
+            ,bootCallback : function(fm, extraObj) {
+                /* any bind functions etc. */
+                fm.bind('init', function() {
+                    // any your code
+                });
+                // for example set document.title dynamically.
+                var title = document.title;
+                fm.bind('open', function() {
+                    var path = '',
+                        cwd  = fm.cwd();
+                    if (cwd) {
+                        path = fm.path(cwd.hash) || null;
+                    }
+                    document.title = path? path + ':' + title : title;
+                }).bind('destroy', function() {
+                    document.title = title;
+                });
+            }
+        },
+        managers : {
+            // 'DOM Element ID': { /* elFinder options of this DOM Element */ }
+            'elfinder': {}
+        }
+    });
+    define('returnVoid', void 0);
+    (function(){
+        var // elFinder version
+            elver = '2.1.38',
+            // jQuery and jQueryUI version
+            jqver = '3.2.1',
+            uiver = '1.12.1',
+            
+            // Detect language (optional)
+            lang = (function() {
+                var locq = window.location.search,
+                    fullLang, locm, lang;
+                if (locq && (locm = locq.match(/lang=([a-zA-Z_-]+)/))) {
+                    // detection by url query (?lang=xx)
+                    fullLang = locm[1];
+                } else {
+                    // detection by browser language
+                    fullLang = (navigator.browserLanguage || navigator.language || navigator.userLanguage);
+                }
+                lang = fullLang.substr(0,2);
+                if (lang === 'ja') lang = 'jp';
+                else if (lang === 'pt') lang = 'pt_BR';
+                else if (lang === 'ug') lang = 'ug_CN';
+                else if (lang === 'zh') lang = (fullLang.substr(0,5).toLowerCase() === 'zh-tw')? 'zh_TW' : 'zh_CN';
+                return lang;
+            })(),
+            
+            // Start elFinder (REQUIRED)
+            start = function(elFinder, editors, config) {
+                // load jQueryUI CSS
+                elFinder.prototype.loadCss('//cdnjs.cloudflare.com/ajax/libs/jqueryui/'+uiver+'/themes/smoothness/jquery-ui.css');
+                
+                $(function() {
+                    var optEditors = {
+                            commandsOptions: {
+                                edit: {
+                                    editors: Array.isArray(editors)? editors : []
+                                }
+                            }
+                        },
+                        opts = {};
+                    
+                    // Interpretation of "elFinderConfig"
+                    if (config && config.managers) {
+                        $.each(config.managers, function(id, mOpts) {
+                            opts = Object.assign(opts, config.defaultOpts || {});
+                            // editors marges to opts.commandOptions.edit
+                            try {
+                                mOpts.commandsOptions.edit.editors = mOpts.commandsOptions.edit.editors.concat(editors || []);
+                            } catch(e) {
+                                Object.assign(mOpts, optEditors);
+                            }
+                            // Make elFinder
+                            $('#' + id).elfinder(
+                                // 1st Arg - options
+                                $.extend(true, { lang: lang }, opts, mOpts || {}),
+                                // 2nd Arg - before boot up function
+                                function(fm, extraObj) {
+                                    // `init` event callback function
+                                    fm.bind('init', function() {
+                                        // Optional for Japanese decoder "extras/encoding-japanese.min"
+                                        delete fm.options.rawStringDecoder;
+                                        if (fm.lang === 'jp') {
+                                            require(
+                                                [ 'encoding-japanese' ],
+                                                function(Encoding) {
+                                                    if (Encoding.convert) {
+                                                        fm.options.rawStringDecoder = function(s) {
+                                                            return Encoding.convert(s,{to:'UNICODE',type:'string'});
+                                                        };
+                                                    }
+                                                }
+                                            );
+                                        }
+                                    });
+                                }
+                            );
+                        });
+                    } else {
+                        alert('"elFinderConfig" object is wrong.');
+                    }
+                });
+            },
+            
+            // JavaScript loader (REQUIRED)
+            load = function() {
+                require(
+                    [
+                        'elfinder'
+                        , 'extras/editors.default'       // load text, image editors
+                        , 'elFinderConfig'
+                    //  , 'extras/quicklook.googledocs'  // optional preview for GoogleApps contents on the GoogleDrive volume
+                    ],
+                    start,
+                    function(error) {
+                        alert(error.message);
+                    }
+                );
+            },
+            
+            // is IE8? for determine the jQuery version to use (optional)
+            ie8 = (typeof window.addEventListener === 'undefined' && typeof document.getElementsByClassName === 'undefined');
+
+        // config of RequireJS (REQUIRED)
+        require.config({
+            baseUrl : '//cdnjs.cloudflare.com/ajax/libs/elfinder/'+elver+'/js',
+            paths : {
+                'jquery'   : '//cdnjs.cloudflare.com/ajax/libs/jquery/'+(ie8? '1.12.4' : jqver)+'/jquery.min',
+                'jquery-ui': '//cdnjs.cloudflare.com/ajax/libs/jqueryui/'+uiver+'/jquery-ui.min',
+                'elfinder' : 'elfinder.min',
+                'encoding-japanese': '//cdn.rawgit.com/polygonplanet/encoding.js/master/encoding.min'
+            },
+            waitSeconds : 10 // optional
+        });
+
+        // load JavaScripts (REQUIRED)
+        load();
+    })();
+
+</script></div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+	</div>
+	<!-- END WRAPPER -->
+
+	<!-- Javascript -->
+	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/bootstrap.js"></script>
+	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/jquery.js"></script>
+	<!-- <script src="http://localhost/purewcms2/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
+	<script src="http://localhost/purewcms2/assets/vendor/chartist/js/chartist.min.js"></script> -->
+	<script src=".,,,bgvhbnml,;.'files:Dashboard_files/klorofil-common.js"></script>
+
+
+
+<audio style="display: none;"></audio></body></html>

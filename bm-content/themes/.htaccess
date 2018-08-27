@@ -1,0 +1,12 @@
+# disallow direct access to url
+# allow access to local files
+
+#Order deny,allow
+#Deny from all
+
+
+
+<Files *.php>
+    Order deny,allow
+    Deny from all
+</Files>

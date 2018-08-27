@@ -1,0 +1,77 @@
+
+
+
+
+
+blog
+	BlogId
+	Title
+	Description
+	Tags
+	Content
+	Url
+	Image
+	DateCreated
+	DateModified
+	DatePublished
+	StatusId	#draft
+
+page
+	PageId
+	Title
+	Content
+	Url
+	Image
+	DateCreated
+	StatusId 	#active
+
+menu
+	Sequence
+
+user
+	UserId
+	Firstname
+	Lastname
+	Email 		#admin@purewcms.com
+	Password 	#11234
+	UserTypeId 	
+	StatusId 	#active
+	
+usertype
+	UserTypeId
+	Name		#administrator, moderator
+	Description
+
+settings
+	SettingsId
+	SiteTitle
+	SiteDescription
+	SiteTags
+	HomePage
+	Logo
+	Favicon
+
+theme
+	ThemeId
+	Name
+	Description
+	Path
+	Image
+	IsUsed
+	StatusId
+
+gallery
+	GalleryId
+	ThemeId
+	Image
+	Caption
+	StatusId
+
+Status 	
+	StatusId
+	Name 		#active, inactive, draft, published, unpublished
+
+
+
+purewcms_markdaryl
+!V3j$Y&SGudF
