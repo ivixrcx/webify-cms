@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() . 'filemanager/files/' . $settings[0]->Favicon ?>">
-	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url() . 'filemanager/files/' . $settings[0]->Favicon ?>">
+	<link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() . 'filemanager/files/' . $settings->Favicon ?>">
+	<link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url() . 'filemanager/files/' . $settings->Favicon ?>">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/linearicons/style.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/vendor/select2/select2.min.css">
@@ -26,7 +26,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
@@ -57,7 +57,7 @@
 							Remember me
 						</label>
 					</div>
-					
+
 					<div class="container-login100-form-btn p-t-25">
 						<button type="submit" class="login100-form-btn">
 							Login
@@ -67,11 +67,11 @@
 			</div>
 		</div>
 	</div>
-	
-	
 
-	
-<!--===============================================================================================-->	
+
+
+
+<!--===============================================================================================-->
 	<script src="<?php echo base_url()?>assets/vendor/jquery/jquery.min.js"></script>
 <!--===============================================================================================-->
 	<script src="<?php echo base_url()?>assets/vendor/bootstrap/js/popper.js"></script>
@@ -86,7 +86,7 @@
 	<script type="text/javascript">
 		$("#frmLogin").submit(function(e){
             e.preventDefault()
-            
+
             form = $(this).serialize();
 
             $.ajax({
@@ -102,8 +102,8 @@
                 success: function(res){
                     if(res.message == 'success'){
                         swal({
-                            title: 'Welcome Back!', 
-                            text: '', 
+                            title: 'Welcome Back!',
+                            text: '',
                             type: "success",
                             timer: 800,
                   			showConfirmButton: false,
@@ -115,7 +115,7 @@
                     else{
                         swal({
                         	title: 'Oops',
-                        	text: 'Invalid Email / Password!', 
+                        	text: 'Invalid Email / Password!',
                         	type: 'error',
                             timer: 800,
                   			showConfirmButton: false,

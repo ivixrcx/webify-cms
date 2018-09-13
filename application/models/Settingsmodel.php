@@ -1,10 +1,10 @@
-<?php 
-	
+<?php
+
 /**
-* 
+*
 */
 class settingsmodel extends CI_Model{
-	
+
 	function __construct(){
 		parent::__construct();
 	}
@@ -14,7 +14,7 @@ class settingsmodel extends CI_Model{
 		$this->db->select('*');
 		$this->db->from('settings');
 		$this->db->limit(1);
-		return $this->db->get()->result();
+		return $this->db->get()->result()[0];
 	}
 
 	public function update($title, $description, $tags, $homepage, $logo, $favicon)

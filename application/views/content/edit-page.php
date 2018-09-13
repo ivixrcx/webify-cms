@@ -14,7 +14,7 @@
                     <span title="Permalink">
                         <span class="fa fa-link"></span>&nbsp;
                         <span id="url" class="text-primary" style="border: 1px solid;"></span>
-                    </span> 
+                    </span>
                 </h4>
                 <h4><span class="fa fa-file"></span>&nbsp;&nbsp;Choose Template</h4>
                 <select id="templates" class="form-control input-lg" name="template"></select>
@@ -229,7 +229,7 @@
             if(res.data.Image != ''){
                 $('#img-uploader').prop('src', '<?php echo base_url() ?>filemanager/files/' + res.data.Image)
             }
-            
+
             $('input[name=image]').val(res.data.Image)
             $('textarea[name=content]').val(res.data.Content)
             $('#url').text('<?php echo base_url() ?>' + res.data.Url)
@@ -302,7 +302,7 @@
             	$('input[name=image]').val(file.url.replace(file.baseUrl, ''));
                 imgReplacer(file.url);
             }
-            // bootCalback calls at before elFinder boot up 
+            // bootCalback calls at before elFinder boot up
             ,bootCallback : function(fm, extraObj) {
                 /* any bind functions etc. */
                 fm.bind('init', function() {
@@ -334,7 +334,7 @@
             // jQuery and jQueryUI version
             jqver = '3.2.1',
             uiver = '1.12.1',
-            
+
             // Detect language (optional)
             lang = (function() {
                 var locq = window.location.search,
@@ -353,12 +353,12 @@
                 else if (lang === 'zh') lang = (fullLang.substr(0,5).toLowerCase() === 'zh-tw')? 'zh_TW' : 'zh_CN';
                 return lang;
             })(),
-            
+
             // Start elFinder (REQUIRED)
             start = function(elFinder, editors, config) {
                 // load jQueryUI CSS
                 elFinder.prototype.loadCss('//cdnjs.cloudflare.com/ajax/libs/jqueryui/'+uiver+'/themes/smoothness/jquery-ui.css');
-                
+
                 $(function() {
                     var optEditors = {
                             commandsOptions: {
@@ -368,7 +368,7 @@
                             }
                         },
                         opts = {};
-                    
+
                     // Interpretation of "elFinderConfig"
                     if (config && config.managers) {
                         $.each(config.managers, function(id, mOpts) {
@@ -410,7 +410,7 @@
                     }
                 });
             },
-            
+
             // JavaScript loader (REQUIRED)
             load = function() {
                 require(
@@ -426,7 +426,7 @@
                     }
                 );
             },
-            
+
             // is IE8? for determine the jQuery version to use (optional)
             ie8 = (typeof window.addEventListener === 'undefined' && typeof document.getElementsByClassName === 'undefined');
 

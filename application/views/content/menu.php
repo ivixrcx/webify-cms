@@ -11,7 +11,7 @@
                         <input type="text" class="form-control input-lg item-menu" name="text" placeholder="Enter title and select icon (optional)">
                         <div class="input-group-btn">
                             <button type="button" id="myEditor_icon" class="btn btn-info btn-lg" data-iconset="fontawesome"></button>
-                            <input type="hidden" name="icon" class="item-menu">                            
+                            <input type="hidden" name="icon" class="item-menu">
                         </div>
                     </div>
                 </div>
@@ -19,7 +19,7 @@
                     <select class="form-control input-lg item-menu" name="page">
                         <option value="" selected>Select a page</option>
                         <option value="blog">Blog list</option>
-                        <?php 
+                        <?php
                         foreach($pages as $page) {
                         $url = explode('/',$page->Url);
                         $url = $url[count($url)-1];
@@ -81,7 +81,7 @@
         var editor = new MenuEditor('myEditor', {listOptions: sortableListOptions, iconPicker: iconPickerOptions, labelEdit: 'Edit'});
         editor.setForm($('#frmEdit'))
         editor.setUpdateButton($('#btnUpdate'));
-        
+
         $("#btnUpdate").click(function(){
             editor.update()
             $('.btnIn').hide()
@@ -130,8 +130,8 @@
 
                     if(res.data.message == 'success'){
                         swal({
-                            title: 'Changes saved!', 
-                            text: '', 
+                            title: 'Changes saved!',
+                            text: '',
                             type: "success",
                             timer: 800,
                             showConfirmButton: false,
@@ -140,7 +140,7 @@
                     else{
                         swal({
                             title: 'Oops',
-                            text: 'Something went wrong!', 
+                            text: 'Something went wrong!',
                             type: 'error',
                             timer: 800,
                             showConfirmButton: false,

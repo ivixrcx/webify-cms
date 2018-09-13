@@ -1,10 +1,10 @@
-<?php 
-	
+<?php
+
 /**
-* 
+*
 */
 class thememodel extends CI_Model{
-	
+
 	function __construct(){
 		parent::__construct();
 	}
@@ -13,6 +13,7 @@ class thememodel extends CI_Model{
 	{
 		$this->db->select('*');
 		$this->db->from('theme');
+		$this->db->where('StatusId', 1);
 		return $this->db->get()->result();
 	}
 

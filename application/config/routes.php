@@ -56,42 +56,46 @@ $route['translate_uri_dashes'] = FALSE;
 
 /* custom routes */
 
-$route['my/dashboard'] 			= 'blog/dashboard';
-$route['my/blog'] 				= 'blog/dashboard';
+$route['upload_gallery/(:any)/(:any)']  = 'blog/upload_gallery/$1/$2';
+$route['delete_photo/(:any)/(:any)']    = 'blog/delete_photo/$1/$2';
+$route['gallery_files/(:any)']          = 'blog/gallery_files/$1';
 
-$route['blog'] 					= 'blog/lists';
-$route['blog/(:any)'] 			= 'blog/search/$1/4';
+$route['my/dashboard'] 			    = 'blog/dashboard';
+$route['my/blog'] 				      = 'blog/dashboard';
+
+$route['blog']                  = 'blog/lists';
+$route['blog/(:any)'] 			    = 'blog/search/$1/4';
 $route['preview/blog/(:any)'] 	= 'blog/search/$1//true';
 
-$route['my/blog/create'] 		= 'blog/create';
-$route['my/blog/draft'] 		= 'blog/draft';;
+$route['my/blog/create']        = 'blog/create';
+$route['my/blog/draft'] 		    = 'blog/draft';;
 $route['my/blog/edit/(:any)'] 	= 'blog/edit/$1';
-$route['my/blog/publish'] 		= 'blog/publish';
-$route['my/blog/unpublish'] 	= 'blog/unpublish';
-$route['my/blog/get/all'] 		= 'blog/get/all';
-$route['my/blog/get/draft'] 	= 'blog/get/draft';
+$route['my/blog/publish'] 		  = 'blog/publish';
+$route['my/blog/unpublish'] 	  = 'blog/unpublish';
+$route['my/blog/get/all'] 		  = 'blog/get/all';
+$route['my/blog/get/draft'] 	  = 'blog/get/draft';
 $route['my/blog/get/published'] = 'blog/get/published';
 $route['my/blog/delete/(:num)'] = 'blog/delete/$1';
 
-$route['my/page'] 				= 'page/dashboard';
-$route['my/page/create'] 		= 'page/create';
-$route['my/page/draft'] 		= 'page/draft';
+$route['my/page'] 				      = 'page/dashboard';
+$route['my/page/create'] 		    = 'page/create';
+$route['my/page/draft'] 		    = 'page/draft';
 $route['my/page/edit/(:any)'] 	= 'page/edit/$1';
-$route['my/page/get'] 			= 'page/get';
+$route['my/page/get'] 			    = 'page/get';
 
-$route['my/themes']				= 'themes/index';
-$route['my/themes/create']		= 'themes/create';
+$route['my/themes']				      = 'themes/index';
+$route['my/themes/create']		  = 'themes/create';
 
-$route['my/menu'] 				= 'menu/dashboard';
-$route['my/filemanager']		= 'filemanager/index';
-$route['my/settings']			= 'settings/index';
-$route['my/settings/update'] 	= 'settings/update';
-$route['my/profile'] 			= 'user/profile';
+$route['my/menu'] 				      = 'menu/dashboard';
+$route['my/filemanager']		    = 'filemanager/index';
+$route['my/settings']			      = 'settings/index';
+$route['my/settings/update'] 	  = 'settings/update';
+$route['my/profile'] 			      = 'user/profile';
 
-$route['admin'] 				= 'user/login';
-$route['logout'] 				= 'user/logout';
-$route['(:any)'] 				= 'page/search/$1';
-$route['preview/(:any)'] 		= 'page/search/$1//true';
+$route['admin'] 				        = 'user/login';
+$route['logout'] 				        = 'user/logout';
+$route['(:any)'] 				        = 'page/search/$1';
+$route['preview/(:any)'] 		    = 'page/search/$1//true';
 
 // Front area
 // $route['blogs'] = 'blog/index';

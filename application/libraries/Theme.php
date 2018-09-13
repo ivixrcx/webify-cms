@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Webify Theme Library Extension
@@ -9,8 +9,8 @@
 
 class theme
 {
-	protected 		$ci;
-	public static 	$theme 		= '';
+	protected 			$ci;
+	public static 	$theme 				= '';
 	public static 	$theme_path 	= '';
 	public static 	$theme_folder = '';
 
@@ -27,7 +27,7 @@ class theme
 
 	public function initialize($data)
 	{
-		// Extract $data 
+		// Extract $data
 		if(is_array($data))
 		{
 			extract($data);
@@ -38,7 +38,7 @@ class theme
 		define( 'BASE_URL_BLOG'	, base_url() . 'blog/' );
 		define( 'BASE_URL_THEME', base_url() . self::$theme_path . '/' );
 		define( 'INCLUDES'		, base_url() . self::$theme_path . '/includes/' );
-		define( 'PLUGINS'		, base_url() . self::$theme_path . '/plugins/'  );		
+		define( 'PLUGINS'		, base_url() . self::$theme_path . '/plugins/'  );
 		define( 'MEDIA'			, base_url() . 'filemanager/files/'  );
 
 		// include self::$theme_path . 'function.php';
@@ -56,7 +56,6 @@ class theme
 
 	public function templates($excludes="", $includes="")
 	{
-
 		$files = array_diff( scandir( 'bm-content/themes/' . self::$theme_folder ), $excludes );
 
 		$a = array();
@@ -67,7 +66,6 @@ class theme
 						$a[] = $file;
 					}
 				}
-				
 			}
 		}
 

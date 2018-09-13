@@ -15,19 +15,19 @@
 		<div class="panel">
 			<div class="panel-body">
 				<small>Site Title</small>
-				<input type="text" class="form-control input-lg" name="title" value="<?php echo $settings[0]->SiteTitle ?>" placeholder="Title" required/>
+				<input type="text" class="form-control input-lg" name="title" value="<?php echo $settings->SiteTitle ?>" placeholder="Title" required/>
 				<br>
 				<small>Site Description</small>
-				<input type="text" class="form-control input-lg" name="description" value="<?php echo $settings[0]->SiteDescription ?>" placeholder="Description" required/>
+				<input type="text" class="form-control input-lg" name="description" value="<?php echo $settings->SiteDescription ?>" placeholder="Description" required/>
 				<br>
 				<!-- <small>Site Tags (eg: travel, nature, forest) </small> -->
-				<!-- <div data-tags-input-name="taggone" id="tag" data-no-spacebar="true" placeholder="test"><?php echo $settings[0]->SiteTags ?></div> -->
+				<!-- <div data-tags-input-name="taggone" id="tag" data-no-spacebar="true" placeholder="test"><?php echo $settings->SiteTags ?></div> -->
 				<!-- <br> -->
 				<small>Default Homepage</small>
 				<select class="form-control input-lg" name="homepage">
 					<option value="">Select a page</option>
-                    <?php 
-                    if($settings[0]->HomePage == 'blog'){
+                    <?php
+                    if($settings->HomePage == 'blog'){
                     	echo '<option value="blog" selected >Blog list</option>';
                     }
                     else{
@@ -38,13 +38,13 @@
                     $url = explode('/',$page->Url);
                     $url = $url[count($url)-1];
 
-	                    if($settings[0]->HomePage == $url){
+	                    if($settings->HomePage == $url){
 							echo '<option value="'.$url.'" selected>'.$page->Title.'</option>';
 	                    }
 	                    else{
 							echo '<option value="'.$url.'">'.$page->Title.'</option>';
 	                    }
-                    } 
+                    }
                     ?>
 				</select>
 				<br>
@@ -61,11 +61,11 @@
 			<div class="panel-body">
 				<div class="col-md-12 wrapper-img" style="background:#e9e9e9">
                     <div class="row">
-                    <img id="img-uploader-logo" class="img-responsive" src="<?php echo base_url() . 'filemanager/files/' . $settings[0]->Logo ?>" style="display:block;margin:auto;height: 120px;max-height: 120px"/>
+                    <img id="img-uploader-logo" class="img-responsive" src="<?php echo base_url() . 'filemanager/files/' . $settings->Logo ?>" style="display:block;margin:auto;height: 120px;max-height: 120px"/>
                     </div>
                     <a href="#" data-toggle="modal" data-target="#dialogFilemanager" onclick="$('#elfinder').data('action','logo')">
                         <div class="overlay"><span class="text-center"><span class="fa fa-cloud-upload" style="font-size: 30px;margin-top: 15px"></span><br/><br/><span style="display: block">Choose from File Manager <br>( 100w &times; 30h )</span></span></div>
-                        <input type="hidden" name="logo" value="<?php echo $settings[0]->Logo ?>" />
+                        <input type="hidden" name="logo" value="<?php echo $settings->Logo ?>" />
                     </a>
                 </div>
 			</div>
@@ -76,11 +76,11 @@
 			<div class="panel-body">
 				<div class="col-md-12 wrapper-img" style="background:#e9e9e9;">
                     <div class="row">
-                    <img id="img-uploader-favicon" class="img-responsive" src="<?php echo base_url() . 'filemanager/files/' . $settings[0]->Favicon ?>" style="display:block;margin:auto;height: 64px;max-height: 64px"/>
+                    <img id="img-uploader-favicon" class="img-responsive" src="<?php echo base_url() . 'filemanager/files/' . $settings->Favicon ?>" style="display:block;margin:auto;height: 64px;max-height: 64px"/>
                     </div>
                     <a href="#" data-toggle="modal" data-target="#dialogFilemanager" onclick="$('#elfinder').data('action','favicon')">
                         <div class="overlay"><span class="text-center"><span class="fa fa-cloud-upload" style="font-size: 20px;margin-top: 30px"></span><br/><br/><span style="display: block;font-size: 14px">Choose from File Manager <br>( 32w &times; 32h )</span></span></div>
-                        <input type="hidden" name="favicon" value="<?php echo $settings[0]->Favicon ?>" />
+                        <input type="hidden" name="favicon" value="<?php echo $settings->Favicon ?>" />
                     </a>
                 </div>
 			</div>
@@ -88,7 +88,7 @@
 
 		<button class="btn btn-primary btn-block btn-lg"><span>Save changes</span></button>
 	</div>
-	</form>	
+	</form>
 </div>
 
 
@@ -140,8 +140,8 @@
 
 						if(res.data.message == 'success'){
 	                        swal({
-	                            title: 'Changes saved!', 
-	                            text: '', 
+	                            title: 'Changes saved!',
+	                            text: '',
 	                            type: "success",
 	                            timer: 800,
 	                            showConfirmButton: false,
@@ -152,7 +152,7 @@
 	                    else{
 	                        swal({
 	                            title: 'Oops',
-	                            text: 'Something went wrong!', 
+	                            text: 'Something went wrong!',
 	                            type: 'error',
 	                            timer: 800,
 	                            showConfirmButton: false,
@@ -220,7 +220,7 @@
 
                 $('#dialogFilemanager').click();
             }
-            // bootCalback calls at before elFinder boot up 
+            // bootCalback calls at before elFinder boot up
             ,bootCallback : function(fm, extraObj) {
                 /* any bind functions etc. */
                 fm.bind('init', function() {
@@ -252,7 +252,7 @@
             // jQuery and jQueryUI version
             jqver = '3.2.1',
             uiver = '1.12.1',
-            
+
             // Detect language (optional)
             lang = (function() {
                 var locq = window.location.search,
@@ -271,12 +271,12 @@
                 else if (lang === 'zh') lang = (fullLang.substr(0,5).toLowerCase() === 'zh-tw')? 'zh_TW' : 'zh_CN';
                 return lang;
             })(),
-            
+
             // Start elFinder (REQUIRED)
             start = function(elFinder, editors, config) {
                 // load jQueryUI CSS
                 elFinder.prototype.loadCss('//cdnjs.cloudflare.com/ajax/libs/jqueryui/'+uiver+'/themes/smoothness/jquery-ui.css');
-                
+
                 $(function() {
                     var optEditors = {
                             commandsOptions: {
@@ -286,7 +286,7 @@
                             }
                         },
                         opts = {};
-                    
+
                     // Interpretation of "elFinderConfig"
                     if (config && config.managers) {
                         $.each(config.managers, function(id, mOpts) {
@@ -328,7 +328,7 @@
                     }
                 });
             },
-            
+
             // JavaScript loader (REQUIRED)
             load = function() {
                 require(
@@ -344,7 +344,7 @@
                     }
                 );
             },
-            
+
             // is IE8? for determine the jQuery version to use (optional)
             ie8 = (typeof window.addEventListener === 'undefined' && typeof document.getElementsByClassName === 'undefined');
 

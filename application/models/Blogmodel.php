@@ -1,32 +1,34 @@
-<?php 
+<?php
 
 /**
-* 
+*
 */
 class blogmodel extends CI_Model
 {
-	
+
 	function __construct()
 	{
 		parent::__construct();
 	}
 
-	public function create($title, $description, $tags, $content, $url, $image, $statusid)
+	public function create($title, $description, $tags, $content, $url, $image, $link_name, $link_url, $statusid)
 	{
 		$data = array(
-			'Title' 		=> ucfirst($title),
-			'Description' 	=> ucfirst($description),
-			'Tags' 			=> strtolower($tags),
+			'Title' 			=> ucfirst($title),
+			'Description' => ucfirst($description),
+			'Tags' 				=> strtolower($tags),
 			'Content' 		=> ucfirst($content),
-			'Url' 			=> strtolower($url),
-			'Image' 		=> $image,
+			'Url' 				=> strtolower($url),
+			'Image' 			=> $image,
+			'LinkName' 		=> $link_name,
+			'LinkURL' 		=> $link_url,
 			'StatusId' 		=> $statusid,
 		);
 
 		return $this->db->insert('blog', $data);
 	}
 
-	public function draft($blogid, $title, $description, $tags, $content, $url, $image, $statusid)
+	public function draft($blogid, $title, $description, $tags, $content, $url, $image, $link_name, $link_url, $statusid)
 	{
 		$this->db->set('Title', ucfirst($title));
 		$this->db->set('Description', ucfirst($description));
@@ -34,6 +36,8 @@ class blogmodel extends CI_Model
 		$this->db->set('Content', ucfirst($content));
 		$this->db->set('Url', strtolower($url));
 		$this->db->set('Image', $image);
+		$this->db->set('LinkName', $link_name);
+		$this->db->set('LinkURL', $link_url);
 		$this->db->set('DateModified', date('Y-m-d'));
 		$this->db->set('StatusId', $statusid);
 		$this->db->where('BlogId', $blogid);

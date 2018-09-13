@@ -1,3 +1,11 @@
+
+let __ff = []
+let __nn = 0
+let __pv = 0
+
+let base_url = location.origin + '/webify/'
+// let base_url = location.origin + '/'
+
 // ************************ Drag and drop ***************** //
 let dropArea = document.getElementById("drop-area")
 
@@ -59,7 +67,18 @@ function updateProgress(fileNumber, percent) {
 }
 
 function handleFiles(files) {
+  // re-initialize storage vars
+  __ff = []
+  __nn = 0
+  __pv = 0
+
   files = [...files]
+  for (let i = 0; i < files.length; i++) {
+    // push random number as filename for upload
+    let ext = files[i].name.split('.').reverse()[0]
+    __ff[i] = 'photo-' + Math.random().toString(9).substring(2,7) + '.' + ext;
+  }
+
   initializeProgress(files.length)
   files.forEach(uploadFile)
   files.forEach(previewFile)
@@ -68,17 +87,58 @@ function handleFiles(files) {
 function previewFile(file) {
   let reader = new FileReader()
   reader.readAsDataURL(file)
-  reader.onloadend = function() {
+  reader.onloadend = function(a,b,c) {
+    let div = document.createElement('div')
+    div.id = __ff[__pv]
+    div.style = 'width: 200px; margin: 5px;'
+    div.className = 'thumbnail pull-left'
+
+    let span = document.createElement('span')
+    span.style = 'position: absolute'
+    span.className = 'close'
+    span.innerHTML = '&times'
+    span.onclick = function(e){
+      // delete from viewport
+      let foldername = document.getElementById('gallery_dir').value
+      let photoId = e.target.parentNode.id
+      document.getElementById(photoId).remove();
+
+      let url = base_url + 'delete_photo/' + foldername + '/' + photoId
+      let xhr = new XMLHttpRequest()
+      xhr.open('POST', url, true)
+      xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
+      xhr.addEventListener('readystatechange', function(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          console.log(xhr.response)
+        }
+        else if (xhr.readyState == 4 && xhr.status != 200) {
+          // Error. Inform the user
+          console.log('error')
+          console.log(xhr.response)
+        }
+      })
+      xhr.send()
+    }
+
     let img = document.createElement('img')
     img.src = reader.result
-    document.getElementById('gallery').appendChild(img)
+    img.style = 'width: 100%'
+    img.className = 'img-responsive'
+
+    div.append(span)
+    div.append(img)
+
+    document.getElementById('gallery').appendChild(div)
+    __pv++
   }
 }
 
 function uploadFile(file, i) {
-  var url = 'https://api.cloudinary.com/v1_1/YOU/image/upload'
-  var xhr = new XMLHttpRequest()
-  var formData = new FormData()
+  let foldername = document.getElementById('gallery_dir').value
+  let url = location.origin + '/webify/upload_gallery/' + foldername + '/' + __ff[__nn].split('.').reverse().pop()
+  // let url = location.origin + '/upload_gallery/' + foldername + '/' + __ff[__nn].split('.').reverse().pop()
+  let xhr = new XMLHttpRequest()
+  let formData = new FormData()
   xhr.open('POST', url, true)
   xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
 
@@ -89,6 +149,8 @@ function uploadFile(file, i) {
 
   xhr.addEventListener('readystatechange', function(e) {
     if (xhr.readyState == 4 && xhr.status == 200) {
+      // console.log(xhr.response)
+
       updateProgress(i, 100) // <- Add this
     }
     else if (xhr.readyState == 4 && xhr.status != 200) {
@@ -96,7 +158,7 @@ function uploadFile(file, i) {
     }
   })
 
-  formData.append('upload_preset', 'YOU')
-  formData.append('file', file)
+  formData.append('userfile', file)
   xhr.send(formData)
+  __nn++
 }

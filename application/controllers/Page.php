@@ -1,17 +1,18 @@
-<?php 
-	
+<?php
+
 /**
-* 
+*
 */
-class page extends CI_Controller 
+class page extends CI_Controller
 {
-	
-	function __construct() 
+
+	function __construct()
 	{
 		parent::__construct();
 		$this->load->library('theme');
 		$this->load->library('webify');
 		$this->load->model('pagemodel');
+		$this->load->model('blogmodel');
 		$this->load->model('menumodel');
 		$this->load->model('settingsmodel');
 	}
@@ -22,16 +23,17 @@ class page extends CI_Controller
 			$this->webify->is_logged_in();
 		}
 
-        $menu = $this->menumodel->get();
-        $data['menus'] 	= json_decode($menu[0]->Sequence);
-        $data['page'] 	= $this->pagemodel->search($page, $statusid);
+    $menu = $this->menumodel->get();
+    $data['menus'] 	= json_decode($menu[0]->Sequence);
+    $data['page'] 	= $this->pagemodel->search($page, $statusid);
 
-       	if(empty($data['page'])){
-       		redirect(base_url());
-       	}
+   	if(empty($data['page'])){
+   		redirect(base_url());
+   	}
 
-       	$data['title'] = $data['page'][0]->Title;
+   	$data['title'] 		= $data['page'][0]->Title;
 		$data['settings'] = $this->settingsmodel->get();
+		$data['blogs'] 		= $this->blogmodel->get(4); // list of published blogs
 		$data['template'] = $data['page'][0]->Template;
 
 		$this->theme->initialize($data);
@@ -86,7 +88,7 @@ class page extends CI_Controller
 	{
 		$this->webify->ajax_only();
 		$this->webify->is_logged_in();
-		
+
 		$pageid 	= $this->input->post('pageid');
 		$title 		= $this->input->post('title');
 		$content 	= $this->input->post('content');
@@ -97,16 +99,16 @@ class page extends CI_Controller
 		if(empty($pageid)){
 			$this->pagemodel->create($title, $content, $url, $image, $template, 1);
 			$pageid = $this->db->insert_id();
-			$this->webify->response['status'] = array('message'=>'success','pageid'=>$pageid);
+			$this->webify->response['data'] = array('message'=>'success','pageid'=>$pageid);
 			$this->webify->output();
 		}
 		else{
 			$this->pagemodel->draft($pageid, $title, $content, $url, $image, $template, 3);
-			$this->webify->response['status'] = array('message'=>'success','pageid'=>'');
+			$this->webify->response['data'] = array('message'=>'success','pageid'=>'');
 			$this->webify->output();
 		}
 
-		$this->webify->response['status'] = array('message'=>'failed');
+		$this->webify->response['data'] = array('message'=>'failed');
 		$this->webify->output();
 	}
 

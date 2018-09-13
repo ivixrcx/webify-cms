@@ -17,8 +17,8 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
-	<link rel="apple-touch-icon" sizes="76x76" href="filemanager/files/<?php echo $settings[0]->Favicon ?>">
-	<link rel="icon" type="image/png" sizes="96x96" href="filemanager/files/<?php echo $settings[0]->Favicon ?>">
+	<link rel="apple-touch-icon" sizes="76x76" href="filemanager/files/<?php echo $settings->Favicon ?>">
+	<link rel="icon" type="image/png" sizes="96x96" href="filemanager/files/<?php echo $settings->Favicon ?>">
 
 	<!-- JQUERY 2.2.4 -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
@@ -49,8 +49,8 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="navbar-brand">
-				<div class="logo" style="background-image: url(filemanager/files/<?php echo $settings[0]->Logo ?>)">
-					<!-- <img src="<?php echo $settings[0]->Logo ?>" alt="logo" style="margin-top: -3px;max-width: 185px;"> -->
+				<div class="logo" style="background-image: url(filemanager/files/<?php echo $settings->Logo ?>)">
+					<!-- <img src="<?php echo $settings->Logo ?>" alt="logo" style="margin-top: -3px;max-width: 185px;"> -->
 				</div>
 			</div>
 			<div class="container-fluid">
