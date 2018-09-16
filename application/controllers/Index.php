@@ -1,11 +1,11 @@
-<?php 
-	
+<?php
+
 /**
-* 
+*
 */
 class index extends CI_Controller
 {
-	
+
 	function __construct()
 	{
 		parent::__construct();
@@ -15,8 +15,8 @@ class index extends CI_Controller
 	public function index()
 	{
 		$settings = $this->settingsmodel->get();
-		redirect(base_url($settings[0]->HomePage));
-	}	
+		redirect(base_url($settings->HomePage));
+	}
 }
 
 
