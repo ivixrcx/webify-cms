@@ -26,7 +26,19 @@
                         ?>
                         <option value="<?php echo $url?>"><?php echo $page->Title?></option>
                         <?php } ?>
+                        <option value="external">External Link</option>
                     </select>
+                </div>
+                <div class="form-group" hidden style="display: none">
+                    <input type="text" name="external_link" class="form-control input-lg item-menu" placeholder="Link URL">
+                    <script>
+                      $('select[name=page]').change(function(e){
+                        $('input[name=external_link]').val('')
+                        if($(this).val() == 'external'){
+                          $('input[name=external_link]').parent().show()
+                        }
+                      })
+                    </script>
                 </div>
                 <div class="form-group">
                     <select class="form-control input-lg item-menu" name="target">

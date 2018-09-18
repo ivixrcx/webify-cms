@@ -698,7 +698,7 @@
             opener.addClass(setting.opener.open).removeClass(setting.opener.close);
         }
     };
-    
+
     /**
      * @author David Ticona Saravia
      * @desc Get the json from html list
@@ -722,7 +722,7 @@
     /**
      * @description Update the buttons at the nested list (the main <ul>).
      * the buttons are: up, down, item in, item out
-     * @param {int} depth 
+     * @param {int} depth
      */
     $.fn.updateButtons = function (depth){
         var level = (typeof depth === 'undefined') ? 0 : depth;
@@ -739,13 +739,13 @@
             if ($ul.length > 0) {
                 $ul.updateButtons(level + 1);
             }
-        }); 
+        });
         $(this).children('li:first').hideButtons(removefirst);
         $(this).children('li:last').hideButtons(removelast);
     };
     /**
      * @description Hide the buttons at the item <li>
-     * @param {Array} buttons 
+     * @param {Array} buttons
      */
     $.fn.hideButtons = function(buttons){
         for(var i = 0; i<buttons.length; i++){
@@ -821,8 +821,8 @@ function MenuEditor(idSelector, options) {
             MenuEditor.updateButtons($main);
 
             swal({
-                title: "Deleted!", 
-                text: "Item deleted.", 
+                title: "Deleted!",
+                text: "Item deleted.",
                 type: "success",
                 timer: 800,
                 showConfirmButton: false
@@ -897,9 +897,15 @@ function MenuEditor(idSelector, options) {
     });
     /*PRIVATE METHODS*/
     function editItem($item) {
+
         var data = $item.data();
+        $('input[name=external_link]').parent().hide()
         $.each(data, function (p, v) {
             $form.find("[name=" + p + "]").val(v);
+
+            if( p == 'external_link' && v != ''){
+              $('input[name=external_link]').parent().show()
+            }
         });
         $form.find(".item-menu").first().focus();
         if (data.hasOwnProperty('icon')) {
@@ -961,7 +967,7 @@ function MenuEditor(idSelector, options) {
             var isParent = (typeof (v.children) !== "undefined") && ($.isArray(v.children));
             var itemObject = {text: "", href: "", icon: "empty", target: "_self", title: ""};
             var temp = $.extend({}, v);
-            if (isParent){ 
+            if (isParent){
                 delete temp['children'];
             }
             $.extend(itemObject, temp);
@@ -1042,7 +1048,7 @@ function MenuEditor(idSelector, options) {
         $cEl.find('span.txt').first().text($cEl.data('text'));
         resetForm();
     };
-   
+
     this.add = function(){
         var data = {};
         $form.find('.item-menu').each(function(){
@@ -1060,7 +1066,7 @@ function MenuEditor(idSelector, options) {
         MenuEditor.updateButtons($main);
         resetForm();
     };
-    
+
     this.getString = function () {
         var obj = $main.sortableListsToJson();
         return JSON.stringify(obj);

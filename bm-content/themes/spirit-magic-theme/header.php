@@ -71,7 +71,7 @@
 				<ul>
 					<?php foreach($menus as $menu): ?>
 					<li class="menu-item menu-item-type-post_type menu-item-object-page">
-							<a href="<?php echo BASE_URL . $menu->page?>" target="<?php echo $menu->target?>">
+							<a href="<?php echo isset($menu->external_link) && !empty(@$menu->external_link) ? $menu->external_link : BASE_URL . $menu->page ?>" target="<?php echo $menu->target?>">
 									<span class="<?php echo $menu->icon?>" >&nbsp;&nbsp;</span><?php echo $menu->text ?>
 							</a>
 					</li>
