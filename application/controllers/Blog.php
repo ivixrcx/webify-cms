@@ -98,6 +98,7 @@ class blog extends CI_Controller
 		$link_name 	= $this->input->post('link_name');
 		$link_url		= $this->input->post('link_url');
 
+		exit('testing, I\'m here');
 		if(empty($blogid)){
 			$this->blogmodel->create($title, $description, $tags, $content, $url, $image, $link_name, $link_name, 1);
 			$blogid = $this->db->insert_id();
@@ -198,7 +199,7 @@ class blog extends CI_Controller
 
 	public function gallery_files($foldername="")
 	{
-		// $this->webify->ajax_only();
+		$this->webify->ajax_only();
 		$this->webify->is_logged_in();
 
 		if(!file_exists('gallery/' . $foldername)){
@@ -207,7 +208,6 @@ class blog extends CI_Controller
 
 		$collections = array();
 		$photos = @array_diff(scandir('gallery/' . $foldername), array('.','..'));
-		print_r($photos);exit;
 		foreach ($photos as $photo) {
 			$collections[] = array(
 				'foldername' =>  $foldername,

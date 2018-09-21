@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/css/gallery.css">
 <div class="row">
 	<form>
 	<div class="col-md-7">
@@ -6,19 +7,22 @@
                 <small>Automatically saved as <b class="text-success">draft</b> when <b>touched</b>.</small>
                 <a id="preview" href="" class="pull-right" target="_blank">Preview</a>
             </div>
-			<div class="panel-body">
-                <input type="hidden" name="blogid"/>
-                <input type="hidden" name="url"/>
-				<input class="form-control input-lg" name="title" placeholder="Title" type="text" required autocomplete="off">
-                <h4 class="permalink">
-                    <span title="Permalink">
-                        <span class="fa fa-link"></span>&nbsp;
-                        <?php echo base_url()?>blog/
-                        <span id="url" class="text-primary" style="border: 1px solid;"></span>
-                    </span> 
-                </h4>
-				<textarea class="form-control input-lg" rows="5"  name="description" placeholder="Short description" required></textarea>
-                <!-- <div data-tags-input-name="tags" id="tag" data-no-spacebar="true" data-type-zone-placeholder="Tags (optional)"></div> -->
+						<div class="panel-body">
+              <input type="hidden" name="blogid"/>
+              <input type="hidden" name="url"/>
+							<input class="form-control input-lg" name="title" placeholder="Title" type="text" required autocomplete="off">
+              <h4 class="permalink" style="font-size: .8em;">
+                <span title="Permalink">
+                  <span class="fa fa-link"></span>&nbsp;
+                  <?php echo base_url()?>blog/
+                  <span id="url" class="text-primary" style="border: 1px solid;"></span>
+                </span>
+              </h4>
+							<textarea class="form-control input-lg" rows="5"  name="description" placeholder="Short description" required style="display:none"></textarea>
+							<!-- <div data-tags-input-name="tags" id="tag" data-no-spacebar="true" data-type-zone-placeholder="Tags (optional)"></div> -->
+							<h3 style="border-width: 3px;border-top-style: dashed;border-top-color: #ccc;padding-top: 20px;margin-top: 25px;">Link <small>(optional)</small></h3>
+							<input type="text" name="link_name" class="form-control input-lg" placeholder="Link name">
+							<input type="text" name="link_url" class="form-control input-lg" placeholder="https://yourlink.com">
             </div>
 		</div>
 	</div>
@@ -50,9 +54,22 @@
             </div>
         </div>
 	</div>
-    <div class="col-md-12">
-        <textarea id="editor" name="content" required></textarea>
-    </div>
+	<div class="col-md-12">
+		<div class="panel" id="drop-area" style="margin-top:-20px;">
+				<div class="panel-body">
+						<h1 style="margin-top:10px">Gallery</h1>
+						<p>Upload multiple files with the file dialog or by dragging and dropping images onto the dashed region</p>
+						<input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+		        <label class="button" for="fileElem">Select some files</label>
+						<progress id="progress-bar" max=100 value=0 style="width:100%"></progress>
+						<input type="hidden" id="gallery_dir" hidden>
+						<div id="gallery"></div>
+				</div>
+		</div>
+	</div>
+  <div class="col-md-12">
+      <textarea id="editor" name="content" required></textarea>
+  </div>
 	</form>
 </div>
 
@@ -118,7 +135,7 @@
     },3000)
 
     // get serialized form to check changes from the form
-    var form_original_data = $("form").serialize(); 
+    var form_original_data = $("form").serialize();
 
     function dirtyForm(){
 
@@ -226,7 +243,7 @@
                     }
                 }
             })
-            
+
         }else{
             $.ajax({
                 type: 'POST',
@@ -349,7 +366,7 @@
                 $('input[name=image]').val(file.url.replace(file.baseUrl, ''));
                 imgReplacer(file.url);
             }
-            // bootCalback calls at before elFinder boot up 
+            // bootCalback calls at before elFinder boot up
             ,bootCallback : function(fm, extraObj) {
                 /* any bind functions etc. */
                 fm.bind('init', function() {
@@ -381,7 +398,7 @@
             // jQuery and jQueryUI version
             jqver = '3.2.1',
             uiver = '1.12.1',
-            
+
             // Detect language (optional)
             lang = (function() {
                 var locq = window.location.search,
@@ -400,12 +417,12 @@
                 else if (lang === 'zh') lang = (fullLang.substr(0,5).toLowerCase() === 'zh-tw')? 'zh_TW' : 'zh_CN';
                 return lang;
             })(),
-            
+
             // Start elFinder (REQUIRED)
             start = function(elFinder, editors, config) {
                 // load jQueryUI CSS
                 elFinder.prototype.loadCss('//cdnjs.cloudflare.com/ajax/libs/jqueryui/'+uiver+'/themes/smoothness/jquery-ui.css');
-                
+
                 $(function() {
                     var optEditors = {
                             commandsOptions: {
@@ -415,7 +432,7 @@
                             }
                         },
                         opts = {};
-                    
+
                     // Interpretation of "elFinderConfig"
                     if (config && config.managers) {
                         $.each(config.managers, function(id, mOpts) {
@@ -457,7 +474,7 @@
                     }
                 });
             },
-            
+
             // JavaScript loader (REQUIRED)
             load = function() {
                 require(
@@ -473,7 +490,7 @@
                     }
                 );
             },
-            
+
             // is IE8? for determine the jQuery version to use (optional)
             ie8 = (typeof window.addEventListener === 'undefined' && typeof document.getElementsByClassName === 'undefined');
 

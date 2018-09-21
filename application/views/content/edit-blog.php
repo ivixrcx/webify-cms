@@ -19,7 +19,7 @@
         </h4>
 
 				<textarea class="form-control input-lg" rows="5"  name="description" placeholder="Short description" required style="display:none"></textarea>
-
+				<!-- <div data-tags-input-name="tags" id="tag" data-no-spacebar="true" data-type-zone-placeholder="Tags (optional)"></div> -->
 				<h3 style="border-width: 3px;border-top-style: dashed;border-top-color: #ccc;padding-top: 20px;margin-top: 25px;">Link <small>(optional)</small></h3>
 				<input type="text" name="link_name" class="form-control input-lg" placeholder="Link name">
 				<input type="text" name="link_url" class="form-control input-lg" placeholder="https://yourlink.com">

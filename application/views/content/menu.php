@@ -18,6 +18,7 @@
                 <div class="form-group">
                     <select class="form-control input-lg item-menu" name="page">
                         <option value="" selected>Select a page</option>
+                        <option value="external">-- External Link --</option>
                         <option value="blog">Blog list</option>
                         <?php
                         foreach($pages as $page) {
@@ -26,7 +27,6 @@
                         ?>
                         <option value="<?php echo $url?>"><?php echo $page->Title?></option>
                         <?php } ?>
-                        <option value="external">External Link</option>
                     </select>
                 </div>
                 <div class="form-group" hidden style="display: none">
@@ -36,6 +36,9 @@
                         $('input[name=external_link]').val('')
                         if($(this).val() == 'external'){
                           $('input[name=external_link]').parent().show()
+                        }
+                        else{
+                          $('input[name=external_link]').parent().val('').hide()
                         }
                       })
                     </script>
